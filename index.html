@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imprimir</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<p class="text-center fs-1 text-primary noMostrar">
+			Imprimir elementos usando css y js
+		</p>
+		<div class="d-grid gap-2">
+			<button class="btn btn-success noMostrar" type="button" onclick="imprimir('*')">Imprimir todo</button>
+		  </div>
+		
+		<div class="row">
+			<div class="col" id="contenedor-perros">
+				<p class="text-center fs-4 text-primary">
+					Mis mascotas (Perros 🐶)
+				</p>
+				<table class="table table-success table-striped" id="tabla-perros">
+				  <thead>
+				  	<th></th>
+				  	<th>Nombre</th>
+				  	<th>Edad</th>
+				  	<th>Género</th>
+				  	<th>¿Esterilizado (a)?</th>
+				  </thead>
+				  <tbody>
+				  	<tr>
+				  		<td>
+				  			<img width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmudvdpG17ubHf-XbPEYxyrEPnqKoH3DPvpPEqmhJP6XFSoLPhVHQfiI_rmdYaSOh622M&usqp=CAU" class="img-thumbnail" alt="...">
+				  		</td>
+				  		<td>Pija</td>
+				  		<td>10 años</td>
+				  		<td>Hembra</td>
+				  		<td>
+				  			<p class="text-success">Sí</p>
+				  		</td>
+				  	</tr>
+				  	<tr>
+				  		<td>
+				  			<img width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvx5DS_xQBQvX-NZKh-3jqOhbsoxPW-QSMvA&usqp=CAU" class="img-thumbnail" alt="...">
+				  		</td>
+				  		<td>Muñeco</td>
+				  		<td>8 años</td>
+				  		<td>Macho</td>
+				  		<td>
+				  			<p class="text-danger">No</p>
+				  		</td>
+				  	</tr>
+				  	<tr>
+				  		<td>
+				  			<img width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3oAgWhjEBye7laOYOapMsXow5iMmVZLAIAg&usqp=CAU" class="img-thumbnail" alt="...">
+				  		</td>
+				  		<td>Odi</td>
+				  		<td>4 años</td>
+				  		<td>Macho</td>
+				  		<td>
+				  			<p class="text-danger">No</p>
+				  		</td>
+				  	</tr>
+				  	<tr>
+				  		<td>
+				  			<img width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkFiYsPqyMc23pa8nyrA__U0gibz0dpBGr1Q&usqp=CAU" class="img-thumbnail" alt="...">
+				  		</td>
+				  		<td>Panque</td>
+				  		<td>3 años</td>
+				  		<td>Hembra</td>
+				  		<td>
+				  			<p class="text-success">Sí</p>
+				  		</td>
+				  	</tr>
+				  	<tr>
+				  		<td>
+				  			<img width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQceQ4TRykMqIr7zuTY05x1G6pb3xV_DMae-w&usqp=CAU" class="img-thumbnail" alt="...">
+				  		</td>
+				  		<td>Canela</td>
+				  		<td>3 años</td>
+				  		<td>Hembra</td>
+				  		<td>
+				  			<p class="text-success">Sí</p>
+				  		</td>
+				  	</tr>
+				  </tbody>
+				</table>
+				<div class="d-grid gap-2">
+				  <button class="btn btn-primary noMostrar" type="button" onclick="imprimir('perros')">Imprimir tabla</button>
+				</div>
+			</div>
+			<div class="col" id="contenedor-gatos">
+				<p class="text-center fs-4 text-primary">
+					Mis mascotas (Gatos 😺)
+				</p>
+				<div class="list-group" id="lista-gatos">
+				  <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+				    <div class="d-flex w-100 justify-content-between">
+				      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7cR9mCXT_IDqn0vLJgcP_3P2vyXSAQIfEBA&usqp=CAU" alt="..." width="100">
+				      <h1>CRISPÍN</h1>
+				    </div>
+				    <p class="mb-1">Nivel de maullido</p>
+				    <div class="progress">
+					  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Example with label" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+					</div>
+					<p class="mb-1">Nivel de ganas de comer</p>
+				    <div class="progress">
+					  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Example with label" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+					</div>
+				  </a>
+				  <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+				    <div class="d-flex w-100 justify-content-between">
+				      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3P5J5Z2NQ_j9UcBlEJ1gh1Z-DExynuIxepQ&usqp=CAU" alt="..." width="100">
+				      <h1>GRIS</h1>
+				    </div>
+				    <p class="mb-1">Nivel de maullido</p>
+				    <div class="progress">
+					  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Example with label" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99%</div>
+					</div>
+					<p class="mb-1">Nivel de ganas de comer</p>
+				    <div class="progress">
+					  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Example with label" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+					</div>
+				  </a>
+				</div>
+				<div class="d-grid gap-2">
+				  <button class="btn btn-primary noMostrar" type="button" onclick="imprimir('gatos')">Imprimir</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+const gatos = document.querySelector("#contenedor-gatos");
+const perros = document.querySelector("#contenedor-perros");
+
+function imprimir(elemento){
+	switch(elemento){
+		case "perros":
+			gatos.classList.add('noMostrar');
+			perros.classList.remove('noMostrar');
+			break;
+		case "gatos":
+			perros.classList.add('noMostrar');
+			gatos.classList.remove('noMostrar');
+			break;
+		case "*":
+			perros.classList.remove('noMostrar');
+			gatos.classList.remove('noMostrar');
+			break;
+		default:
+			console.log("No imprimo nada")	
+	}
+	window.print()
+}
+
+
+</script>
+
+<style type="text/css">
+body{
+	background-color: #D2DBEE;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3CradialGradient id='a' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23ACD0DE'/%3E%3Cstop offset='1' stop-color='%23D2DBEE'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='750' x2='1550' y2='750'%3E%3Cstop offset='0' stop-color='%23bfd6e6'/%3E%3Cstop offset='1' stop-color='%23D2DBEE'/%3E%3C/linearGradient%3E%3Cpath id='s' fill='url(%23b)' d='M1549.2 51.6c-5.4 99.1-20.2 197.6-44.2 293.6c-24.1 96-57.4 189.4-99.3 278.6c-41.9 89.2-92.4 174.1-150.3 253.3c-58 79.2-123.4 152.6-195.1 219c-71.7 66.4-149.6 125.8-232.2 177.2c-82.7 51.4-170.1 94.7-260.7 129.1c-90.6 34.4-184.4 60-279.5 76.3C192.6 1495 96.1 1502 0 1500c96.1-2.1 191.8-13.3 285.4-33.6c93.6-20.2 185-49.5 272.5-87.2c87.6-37.7 171.3-83.8 249.6-137.3c78.4-53.5 151.5-114.5 217.9-181.7c66.5-67.2 126.4-140.7 178.6-218.9c52.3-78.3 96.9-161.4 133-247.9c36.1-86.5 63.8-176.2 82.6-267.6c18.8-91.4 28.6-184.4 29.6-277.4c0.3-27.6 23.2-48.7 50.8-48.4s49.5 21.8 49.2 49.5c0 0.7 0 1.3-0.1 2L1549.2 51.6z'/%3E%3Cg id='g'%3E%3Cuse href='%23s' transform='scale(0.12) rotate(60)'/%3E%3Cuse href='%23s' transform='scale(0.2) rotate(10)'/%3E%3Cuse href='%23s' transform='scale(0.25) rotate(40)'/%3E%3Cuse href='%23s' transform='scale(0.3) rotate(-20)'/%3E%3Cuse href='%23s' transform='scale(0.4) rotate(-30)'/%3E%3Cuse href='%23s' transform='scale(0.5) rotate(20)'/%3E%3Cuse href='%23s' transform='scale(0.6) rotate(60)'/%3E%3Cuse href='%23s' transform='scale(0.7) rotate(10)'/%3E%3Cuse href='%23s' transform='scale(0.835) rotate(-40)'/%3E%3Cuse href='%23s' transform='scale(0.9) rotate(40)'/%3E%3Cuse href='%23s' transform='scale(1.05) rotate(25)'/%3E%3Cuse href='%23s' transform='scale(1.2) rotate(8)'/%3E%3Cuse href='%23s' transform='scale(1.333) rotate(-60)'/%3E%3Cuse href='%23s' transform='scale(1.45) rotate(-30)'/%3E%3Cuse href='%23s' transform='scale(1.6) rotate(10)'/%3E%3C/g%3E%3C/defs%3E%3Cg transform='rotate(0 0 0)'%3E%3Cg transform='rotate(0 0 0)'%3E%3Ccircle fill='url(%23a)' r='3000'/%3E%3Cg opacity='0.5'%3E%3Ccircle fill='url(%23a)' r='2000'/%3E%3Ccircle fill='url(%23a)' r='1800'/%3E%3Ccircle fill='url(%23a)' r='1700'/%3E%3Ccircle fill='url(%23a)' r='1651'/%3E%3Ccircle fill='url(%23a)' r='1450'/%3E%3Ccircle fill='url(%23a)' r='1250'/%3E%3Ccircle fill='url(%23a)' r='1175'/%3E%3Ccircle fill='url(%23a)' r='900'/%3E%3Ccircle fill='url(%23a)' r='750'/%3E%3Ccircle fill='url(%23a)' r='500'/%3E%3Ccircle fill='url(%23a)' r='380'/%3E%3Ccircle fill='url(%23a)' r='250'/%3E%3C/g%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23g' transform='rotate(10)'/%3E%3Cuse href='%23g' transform='rotate(120)'/%3E%3Cuse href='%23g' transform='rotate(240)'/%3E%3C/g%3E%3Ccircle fill-opacity='0.1' fill='url(%23a)' r='3000'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	background-attachment: local;
+	background-size: content;
+}
+@media print {
+ body {-webkit-print-color-adjust: exact;}
+  	.noMostrar{
+   		display: none; 
+ 	}
+}
+</style>
